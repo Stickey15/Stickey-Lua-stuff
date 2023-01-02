@@ -60,9 +60,9 @@ local function hudPaint()
 	surface.SetMaterial(Material("materials/hud/money.png")) 
 	surface.DrawTexturedRect( x - 70 + (200 - 8) / 2, y - 40, 20, 20 ) 
 	
-	surface.SetDrawColor( 255, 255, 255, 255 ) -- Set the drawing color
-	surface.SetMaterial(Material("materials/hud/xp.png")) 
-	surface.DrawTexturedRect( x + 105 + (200 - 8) / 2, y - 168, 20, 20 ) 
+	--surface.SetDrawColor( 255, 255, 255, 255 ) -- Set the drawing color
+	--surface.SetMaterial(Material("materials/hud/xp.png")) 
+	--surface.DrawTexturedRect( x + 105 + (200 - 8) / 2, y - 168, 20, 20 ) 
 	
     draw.DrawText("Health: " .. math.Max(0, math.Round(localplayer:Health())), "Trebuchet24", x - 45 + (200 - 8) / 2, y - 115, Color(255, 255, 255, 255), TEXT_ALIGN_LEFT )
 
@@ -79,7 +79,7 @@ local function hudPaint()
 	
 	draw.DrawText( (ix.faction.Get(localplayer:Team()).name), "HUDFont69", x - 37 + (200 - 8) / 2, y - 145, team.GetColor( LocalPlayer():Team() ), TEXT_ALIGN_LEFT )
 
-
+-- hunger is changed to stamina bc helix doesnt come with a hunger plugin by default, so u will have to change the value here to hunger
        draw.DrawNonParsedSimpleText("Stamina: " .. char:GetLocalVar("stm", 0), "Trebuchet24", x - 45 + (200 - 8) / 2, y - 77, Color(255, 255, 255, 255), TEXT_ALIGN_LEFT )
 
 	
