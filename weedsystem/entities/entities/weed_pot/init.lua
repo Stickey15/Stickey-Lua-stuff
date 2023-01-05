@@ -1,3 +1,6 @@
+-- TO ANY PERSON READING THIS
+-- i sinscerely apologies for the shitty indenting and wish you good luck interpreting my shit code
+
 AddCSLuaFile("shared.lua")
 include("shared.lua")
 
