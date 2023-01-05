@@ -29,15 +29,15 @@ function ENT:Use( activator , caller , SIMPLE_USE )
 	if self:GetStage() == 0 then
 	self:SetModel("models/the_weed/the_weed_potdirt.mdl")
 	else
-    if (self.nextMine or 0) > curTime then return end
-    self.nextMine = curTime + 5
+    if (self.nextDelay or 0) > curTime then return end
+    self.nextDelay = curTime + 5
 
     activator:ChatNotify("You need dirt")
 end
 	local GetInv = inventory
 	if (GetInv:HasItem("dirt")) then
-	if (self.nextMine or 0) > curTime then return end
-    self.nextMine = curTime + 5
+	if (self.nextDelay or 0) > curTime then return end
+    self.nextDelay = curTime + 5
     GetInv:HasItem("dirt"):Remove()
 	self:Growing()
 	end
